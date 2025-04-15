@@ -85,7 +85,7 @@
     <!-- 2. 登录/注册页 -->
     <div id="page-auth" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
       <h2 class="text-xl font-semibold mb-4 text-center">登录/注册页</h2>
-      <div class="bg-white rounded-xl h-[600px] flex flex-col p-6">
+      <div class="bg-white rounded-xl h-[600px] flex flex-col p-6 overflow-y-auto custom-scrollbar">
         <div class="flex justify-center mb-8 mt-10">
           <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="冥想" class="w-32 h-32 rounded-full object-cover shadow-md">
         </div>
@@ -285,79 +285,81 @@
         </div>
         
         <!-- 课程信息 -->
-        <div class="p-5">
-          <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center">
-              <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+        <div class="flex-1 overflow-y-auto custom-scrollbar">
+          <div class="p-5">
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="font-medium">张雯瑜</h4>
+                  <p class="text-xs text-gray-500">冥想指导师</p>
+                </div>
               </div>
-              <div>
-                <h4 class="font-medium">张雯瑜</h4>
-                <p class="text-xs text-gray-500">冥想指导师</p>
+              <div class="text-yellow-500 flex items-center">
+                <i class="fas fa-star mr-1"></i>
+                <span>4.9</span>
               </div>
             </div>
-            <div class="text-yellow-500 flex items-center">
-              <i class="fas fa-star mr-1"></i>
-              <span>4.9</span>
-            </div>
-          </div>
           
-          <div class="flex gap-3 mb-4">
-            <div class="flex-1 p-3 bg-gray-50 rounded-xl flex flex-col items-center">
-              <i class="far fa-clock text-indigo-500 mb-1"></i>
-              <span class="text-sm font-medium">20分钟</span>
+            <div class="flex gap-3 mb-4">
+              <div class="flex-1 p-3 bg-gray-50 rounded-xl flex flex-col items-center">
+                <i class="far fa-clock text-indigo-500 mb-1"></i>
+                <span class="text-sm font-medium">20分钟</span>
+              </div>
+              <div class="flex-1 p-3 bg-gray-50 rounded-xl flex flex-col items-center">
+                <i class="fas fa-signal text-indigo-500 mb-1"></i>
+                <span class="text-sm font-medium">中级</span>
+              </div>
+              <div class="flex-1 p-3 bg-gray-50 rounded-xl flex flex-col items-center">
+                <i class="fas fa-headphones text-indigo-500 mb-1"></i>
+                <span class="text-sm font-medium">需安静环境</span>
+              </div>
             </div>
-            <div class="flex-1 p-3 bg-gray-50 rounded-xl flex flex-col items-center">
-              <i class="fas fa-signal text-indigo-500 mb-1"></i>
-              <span class="text-sm font-medium">中级</span>
-            </div>
-            <div class="flex-1 p-3 bg-gray-50 rounded-xl flex flex-col items-center">
-              <i class="fas fa-headphones text-indigo-500 mb-1"></i>
-              <span class="text-sm font-medium">需安静环境</span>
-            </div>
-          </div>
           
-          <h3 class="font-medium mb-2">课程介绍</h3>
-          <p class="text-gray-600 text-sm mb-4">
-            这是一个帮助您缓解工作压力、平复负面情绪的深度冥想课程。通过引导式呼吸和意识聚焦练习，使身心完全放松，找回内心的平静。适合任何压力较大或情绪波动的时刻。
-          </p>
+            <h3 class="font-medium mb-2">课程介绍</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              这是一个帮助您缓解工作压力、平复负面情绪的深度冥想课程。通过引导式呼吸和意识聚焦练习，使身心完全放松，找回内心的平静。适合任何压力较大或情绪波动的时刻。
+            </p>
           
-          <h3 class="font-medium mb-2">课程内容</h3>
-          <div class="space-y-3 mb-6">
-            <div class="flex items-center">
-              <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
-                <i class="fas fa-play text-xs text-indigo-600"></i>
+            <h3 class="font-medium mb-2">课程内容</h3>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                  <i class="fas fa-play text-xs text-indigo-600"></i>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-sm font-medium">准备与引导</h4>
+                  <p class="text-xs text-gray-500">3分钟</p>
+                </div>
               </div>
-              <div class="flex-1">
-                <h4 class="text-sm font-medium">准备与引导</h4>
-                <p class="text-xs text-gray-500">3分钟</p>
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                  <i class="fas fa-play text-xs text-indigo-600"></i>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-sm font-medium">深度呼吸练习</h4>
+                  <p class="text-xs text-gray-500">8分钟</p>
+                </div>
               </div>
-            </div>
-            <div class="flex items-center">
-              <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
-                <i class="fas fa-play text-xs text-indigo-600"></i>
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                  <i class="fas fa-play text-xs text-indigo-600"></i>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-sm font-medium">身体扫描放松</h4>
+                  <p class="text-xs text-gray-500">7分钟</p>
+                </div>
               </div>
-              <div class="flex-1">
-                <h4 class="text-sm font-medium">深度呼吸练习</h4>
-                <p class="text-xs text-gray-500">8分钟</p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
-                <i class="fas fa-play text-xs text-indigo-600"></i>
-              </div>
-              <div class="flex-1">
-                <h4 class="text-sm font-medium">身体扫描放松</h4>
-                <p class="text-xs text-gray-500">7分钟</p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
-                <i class="fas fa-play text-xs text-indigo-600"></i>
-              </div>
-              <div class="flex-1">
-                <h4 class="text-sm font-medium">冥想结束与回顾</h4>
-                <p class="text-xs text-gray-500">2分钟</p>
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                  <i class="fas fa-play text-xs text-indigo-600"></i>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-sm font-medium">冥想结束与回顾</h4>
+                  <p class="text-xs text-gray-500">2分钟</p>
+                </div>
               </div>
             </div>
           </div>
@@ -376,7 +378,7 @@
     <!-- 5. 冥想进行页 -->
     <div id="page-meditation" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
       <h2 class="text-xl font-semibold mb-4 text-center">冥想进行页</h2>
-      <div class="theme-calm rounded-xl h-[600px] flex flex-col items-center justify-center text-white p-6">
+      <div class="theme-calm rounded-xl h-[600px] flex flex-col items-center justify-center text-white p-6 relative">
         <!-- 顶部 -->
         <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
           <button class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
@@ -389,7 +391,7 @@
         </div>
         
         <!-- 中间进度指示 -->
-        <div class="circular-progress mb-6">
+        <div class="circular-progress mb-5">
           <svg width="200" height="200" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="5" />
             <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="5" stroke-dasharray="283" stroke-dashoffset="170" />
@@ -409,7 +411,7 @@
         </div>
         
         <!-- 控制按钮 -->
-        <div class="flex justify-center items-center gap-6">
+        <div class="flex justify-center items-center gap-6 mb-6">
           <button class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
             <i class="fas fa-backward"></i>
           </button>
@@ -422,7 +424,7 @@
         </div>
         
         <!-- 底部进度条 -->
-        <div class="absolute bottom-8 left-8 right-8">
+        <div class="absolute bottom-8 left-8 right-8 w-auto">
           <div class="h-1 bg-white/20 rounded-full mb-2">
             <div class="h-full bg-white rounded-full" style="width: 40%"></div>
           </div>
@@ -499,8 +501,8 @@
           <p class="text-gray-600">查看您的冥想进展与习惯</p>
         </div>
         
-        <!-- 总览卡片 -->
-        <div class="p-5">
+        <!-- 总览卡片 - 添加滚动区域 -->
+        <div class="flex-1 p-5 overflow-y-auto custom-scrollbar">
           <div class="bg-white rounded-xl shadow-sm p-5 mb-6">
             <h3 class="text-base font-medium mb-4">本月概览</h3>
             <div class="flex justify-between mb-4">
@@ -948,7 +950,7 @@
         </div>
         
         <!-- 功能列表 -->
-        <div class="px-6 flex-1">
+        <div class="px-6 flex-1 overflow-y-auto custom-scrollbar">
           <div class="space-y-5">
             <div class="bg-white rounded-xl shadow-sm overflow-hidden">
               <a href="#" class="flex items-center p-4 border-b border-gray-100">
@@ -1050,106 +1052,107 @@
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- 10. 设置提醒页 -->
-  <div id="page-reminder" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
-    <h2 class="text-xl font-semibold mb-4 text-center">设置提醒页</h2>
-    <div class="bg-white rounded-xl h-[600px] flex flex-col">
-      <!-- 顶部导航 -->
-      <div class="p-4 border-b border-gray-100 flex items-center">
-        <button class="w-8 h-8 flex items-center justify-center mr-4">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <h2 class="text-lg font-bold flex-1">冥想提醒</h2>
-        <button class="text-indigo-600 font-medium">保存</button>
-      </div>
-      
-      <!-- 内容区域 -->
-      <div class="p-5 flex-1">
-        <p class="text-gray-500 mb-6">设置定期冥想提醒，养成良好习惯</p>
-        
-        <!-- 提醒开关 -->
-        <div class="flex justify-between items-center mb-6">
-          <span class="font-medium">开启提醒</span>
-          <div class="relative inline-block w-12 h-6 rounded-full bg-indigo-600">
-            <div class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white"></div>
-          </div>
+
+    <!-- 10. 设置提醒页 -->
+    <div id="page-reminder" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+      <h2 class="text-xl font-semibold mb-4 text-center">设置提醒页</h2>
+      <div class="bg-white rounded-xl h-[600px] flex flex-col">
+        <!-- 顶部导航 -->
+        <div class="p-4 border-b border-gray-100 flex items-center">
+          <button class="w-8 h-8 flex items-center justify-center mr-4">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <h2 class="text-lg font-bold flex-1">冥想提醒</h2>
+          <button class="text-indigo-600 font-medium">保存</button>
         </div>
         
-        <!-- 提醒时间 -->
-        <h3 class="font-medium mb-3">提醒时间</h3>
-        <div class="bg-gray-50 rounded-xl p-4 mb-5">
-          <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center">
-              <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
-                <i class="fas fa-sun text-indigo-600"></i>
-              </div>
-              <span>早晨提醒</span>
-            </div>
+        <!-- 内容区域 -->
+        <div class="p-5 flex-1 overflow-y-auto custom-scrollbar">
+          <p class="text-gray-500 mb-6">设置定期冥想提醒，养成良好习惯</p>
+          
+          <!-- 提醒开关 -->
+          <div class="flex justify-between items-center mb-6">
+            <span class="font-medium">开启提醒</span>
             <div class="relative inline-block w-12 h-6 rounded-full bg-indigo-600">
               <div class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white"></div>
             </div>
           </div>
           
-          <div class="flex justify-between pl-11">
-            <span class="text-gray-500">时间</span>
-            <div class="flex items-center">
-              <span class="font-medium">07:30</span>
-              <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-gray-50 rounded-xl p-4 mb-5">
-          <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center">
-              <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center mr-3">
-                <i class="fas fa-moon text-amber-600"></i>
+          <!-- 提醒时间 -->
+          <h3 class="font-medium mb-3">提醒时间</h3>
+          <div class="bg-gray-50 rounded-xl p-4 mb-5">
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                  <i class="fas fa-sun text-indigo-600"></i>
+                </div>
+                <span>早晨提醒</span>
               </div>
-              <span>晚间提醒</span>
+              <div class="relative inline-block w-12 h-6 rounded-full bg-indigo-600">
+                <div class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white"></div>
+              </div>
             </div>
-            <div class="relative inline-block w-12 h-6 rounded-full bg-indigo-600">
-              <div class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white"></div>
+            
+            <div class="flex justify-between pl-11">
+              <span class="text-gray-500">时间</span>
+              <div class="flex items-center">
+                <span class="font-medium">07:30</span>
+                <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+              </div>
             </div>
           </div>
           
-          <div class="flex justify-between pl-11">
-            <span class="text-gray-500">时间</span>
-            <div class="flex items-center">
-              <span class="font-medium">22:00</span>
+          <div class="bg-gray-50 rounded-xl p-4 mb-5">
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center mr-3">
+                  <i class="fas fa-moon text-amber-600"></i>
+                </div>
+                <span>晚间提醒</span>
+              </div>
+              <div class="relative inline-block w-12 h-6 rounded-full bg-indigo-600">
+                <div class="absolute right-1 top-1 w-4 h-4 rounded-full bg-white"></div>
+              </div>
+            </div>
+            
+            <div class="flex justify-between pl-11">
+              <span class="text-gray-500">时间</span>
+              <div class="flex items-center">
+                <span class="font-medium">22:00</span>
+                <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 添加新提醒 -->
+          <button class="w-full py-3 border border-dashed border-indigo-300 rounded-xl text-indigo-600 flex items-center justify-center">
+            <i class="fas fa-plus mr-2"></i>
+            添加新提醒
+          </button>
+          
+          <!-- 重复设置 -->
+          <h3 class="font-medium mt-6 mb-3">重复</h3>
+          <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4 mb-4">
+            <span>重复日期</span>
+            <div class="flex items-center text-gray-500">
+              <span>每天</span>
               <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
             </div>
           </div>
-        </div>
-        
-        <!-- 添加新提醒 -->
-        <button class="w-full py-3 border border-dashed border-indigo-300 rounded-xl text-indigo-600 flex items-center justify-center">
-          <i class="fas fa-plus mr-2"></i>
-          添加新提醒
-        </button>
-        
-        <!-- 重复设置 -->
-        <h3 class="font-medium mt-6 mb-3">重复</h3>
-        <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4 mb-4">
-          <span>重复日期</span>
-          <div class="flex items-center text-gray-500">
-            <span>每天</span>
-            <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
-          </div>
-        </div>
-        
-        <!-- 提醒声音 -->
-        <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4">
-          <span>提醒声音</span>
-          <div class="flex items-center text-gray-500">
-            <span>平静</span>
-            <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+          
+          <!-- 提醒声音 -->
+          <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4">
+            <span>提醒声音</span>
+            <div class="flex items-center text-gray-500">
+              <span>平静</span>
+              <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
   
   <!-- JavaScript部分 -->
   <script>
