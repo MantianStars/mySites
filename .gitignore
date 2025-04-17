@@ -1,0 +1,12 @@
+# 依赖目录
+node_modules/
+
+# 构建目录
+dist/
+build/
+out/
+
+# IDE 和编辑器
+.idea/
+.vscode/
+.DS_Store

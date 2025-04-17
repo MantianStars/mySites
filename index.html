@@ -14,6 +14,14 @@
     body {
       font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
     }
+
+    .app-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
     
     /* 自定义滚动条样式 */
     .custom-scrollbar::-webkit-scrollbar {
@@ -48,6 +56,14 @@
     
     /* 页面过渡效果 */
     .page {
+      width: 375px;
+      background-color: white;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      /* border: 10px solid #333; */
       transition: all 0.3s ease;
     }
     
@@ -63,14 +79,30 @@
     .theme-sleep {
       background: linear-gradient(120deg, #30cfd0 0%, #330867 100%);
     }
+    
+    /* 底部导航样式 */
+    .nav-container {
+      width: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      position: absolute;
+      bottom: 0;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    
+    /* 自定义底部内边距 */
+    .nav-pd {
+      padding-bottom: 55px !important;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <div class="container mx-auto px-4 py-8 max-w-md">
-    <h1 class="text-2xl font-bold mb-8 text-center">冥想静心 - iOS应用原型图</h1>
-    
+  <h1 class="text-3xl font-bold text-center my-6">冥想静心 - iOS应用原型图</h1>
+  <div class="app-container">
     <!-- 1. 启动页 -->
-    <div id="page-splash" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-splash" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">启动页</h2>
       <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl h-[600px] flex flex-col items-center justify-center text-white p-8">
         <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center mb-8 shadow-lg">
@@ -83,7 +115,7 @@
     </div>
     
     <!-- 2. 登录/注册页 -->
-    <div id="page-auth" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-auth" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">登录/注册页</h2>
       <div class="bg-white rounded-xl h-[600px] flex flex-col p-6 overflow-y-auto custom-scrollbar">
         <div class="flex justify-center mb-8 mt-10">
@@ -130,9 +162,9 @@
     </div>
     
     <!-- 3. 主页 -->
-    <div id="page-home" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-home" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">主页</h2>
-      <div class="bg-gray-50 rounded-xl h-[600px] flex flex-col">
+      <div class="bg-gray-50 rounded-xl h-[600px] flex flex-col overflow-y-auto custom-scrollbar">
         <!-- 顶部问候 -->
         <div class="p-6">
           <div class="flex justify-between items-center mb-2">
@@ -192,7 +224,7 @@
         </div>
         
         <!-- 热门课程 -->
-        <div class="px-6 flex-1 overflow-y-auto custom-scrollbar">
+        <div class="p-6 flex-1">
           <h3 class="text-lg font-medium mb-3">热门课程</h3>
           <div class="space-y-3">
             <div class="bg-white p-4 rounded-xl shadow-sm flex items-center">
@@ -238,7 +270,7 @@
         </div>
         
         <!-- 底部导航 -->
-        <div class="mt-auto border-t border-gray-200">
+        <div class="mt-auto border-t border-gray-200 nav-container">
           <div class="flex justify-around py-3">
             <div class="flex flex-col items-center">
               <i class="fas fa-home text-indigo-600"></i>
@@ -262,7 +294,7 @@
     </div>
     
     <!-- 4. 课程详情页 -->
-    <div id="page-course-detail" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-course-detail" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">课程详情页</h2>
       <div class="bg-white rounded-xl h-[600px] flex flex-col">
         <!-- 课程封面 -->
@@ -376,7 +408,7 @@
     </div>
     
     <!-- 5. 冥想进行页 -->
-    <div id="page-meditation" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-meditation" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">冥想进行页</h2>
       <div class="theme-calm rounded-xl h-[600px] flex flex-col items-center justify-center text-white p-6 relative">
         <!-- 顶部 -->
@@ -437,7 +469,7 @@
     </div>
     
     <!-- 6. 冥想完成页 -->
-    <div id="page-completion" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-completion" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">冥想完成页</h2>
       <div class="bg-gradient-to-br from-green-400 to-blue-500 rounded-xl h-[600px] flex flex-col items-center justify-center p-6 text-white">
         <div class="w-24 h-24 rounded-full bg-white/20 mb-6 flex items-center justify-center">
@@ -492,7 +524,7 @@
     </div>
     
     <!-- 7. 个人统计页 -->
-    <div id="page-stats" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-stats" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">个人统计页</h2>
       <div class="bg-gray-50 rounded-xl h-[600px] flex flex-col">
         <!-- 顶部 -->
@@ -651,7 +683,7 @@
         </div>
         
         <!-- 底部导航 -->
-        <div class="mt-auto border-t border-gray-200">
+        <div class="mt-auto border-t border-gray-200 nav-container">
           <div class="flex justify-around py-3">
             <div class="flex flex-col items-center text-gray-400">
               <i class="fas fa-home"></i>
@@ -675,7 +707,7 @@
     </div>
     
     <!-- 8. 发现页 -->
-    <div id="page-discover" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-discover" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">发现页</h2>
       <div class="bg-gray-50 rounded-xl h-[600px] flex flex-col">
         <!-- 顶部搜索 -->
@@ -695,7 +727,7 @@
         </div>
         
         <!-- 滚动内容区 -->
-        <div class="px-5 flex-1 overflow-y-auto custom-scrollbar">
+        <div class="p-5 flex-1 overflow-y-auto custom-scrollbar">
           <!-- 精选专题 -->
           <div class="mb-6">
             <h3 class="text-base font-medium mb-3">精选专题</h3>
@@ -875,7 +907,7 @@
         </div>
         
         <!-- 底部导航 -->
-        <div class="mt-auto border-t border-gray-200">
+        <div class="mt-auto border-t border-gray-200 nav-container">
           <div class="flex justify-around py-3">
             <div class="flex flex-col items-center text-gray-400">
               <i class="fas fa-home"></i>
@@ -899,25 +931,28 @@
     </div>
     
     <!-- 9. 个人中心页 -->
-    <div id="page-profile" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-profile" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">个人中心页</h2>
       <div class="bg-gray-50 rounded-xl h-[600px] flex flex-col">
         <!-- 顶部个人信息 -->
-        <div class="p-6 flex items-center">
-          <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+        <div class="p-5">
+          <div class="p-6 flex items-center">
+            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+            </div>
+            <div class="flex-1">
+              <h2 class="text-lg font-bold">李明</h2>
+              <p class="text-gray-500">冥想练习者 · 已坚持30天</p>
+            </div>
           </div>
-          <div class="flex-1">
-            <h2 class="text-lg font-bold">李明</h2>
-            <p class="text-gray-500">冥想练习者 · 已坚持30天</p>
-          </div>
+          <button class="px-3 py-1 border border-gray-300 rounded-full text-sm">
+            编辑资料
+          </button>
         </div>
-        <button class="px-3 py-1 border border-gray-300 rounded-full text-sm">
-          编辑资料
-        </button>
         
-        <!-- 成就展示 -->
-        <div class="px-6 py-4">
+        <!-- 滚动内容区 -->
+        <div class="p-5 flex-1 overflow-y-auto custom-scrollbar">
+          <!-- 成就展示 -->
           <div class="bg-white rounded-xl shadow-sm p-4">
             <h3 class="font-medium mb-3">我的成就</h3>
             <div class="grid grid-cols-4 gap-3">
@@ -947,10 +982,8 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <!-- 功能列表 -->
-        <div class="px-6 flex-1 overflow-y-auto custom-scrollbar">
+          
+          <!-- 功能列表 -->
           <div class="space-y-5">
             <div class="bg-white rounded-xl shadow-sm overflow-hidden">
               <a href="#" class="flex items-center p-4 border-b border-gray-100">
@@ -1030,7 +1063,7 @@
         </div>
         
         <!-- 底部导航 -->
-        <div class="mt-auto border-t border-gray-200">
+        <div class="mt-auto border-t border-gray-200 nav-container">
           <div class="flex justify-around py-3">
             <div class="flex flex-col items-center text-gray-400">
               <i class="fas fa-home"></i>
@@ -1054,7 +1087,7 @@
     </div>
 
     <!-- 10. 设置提醒页 -->
-    <div id="page-reminder" class="page bg-white rounded-xl shadow-lg p-8 mb-10">
+    <div id="page-reminder" class="page bg-white rounded-xl shadow-lg p-8">
       <h2 class="text-xl font-semibold mb-4 text-center">设置提醒页</h2>
       <div class="bg-white rounded-xl h-[600px] flex flex-col">
         <!-- 顶部导航 -->
